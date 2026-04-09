@@ -1,1 +1,179 @@
-Initializing
+# Repolex Knowledge Graph of pypa/packaging
+
+RDF knowledge graph data for [pypa/packaging](https://github.com/pypa/packaging), parsed by [repolex](https://repolex.ai).
+
+> **Note**: This data is experimental and subject to change without notice.
+
+## How to use this data
+
+The easiest way to get started is to install the [lexq](https://github.com/repolex-ai/lexq) query tool using [uv](https://docs.astral.sh/uv/getting-started/installation/).
+
+If you have uv installed, just copy/paste this into your terminal:
+
+```bash
+uv tool install git+https://github.com/repolex-ai/lexq
+```
+
+This installs lexq onto your system, in your user context. Verify the install:
+
+```bash
+lexq --help
+```
+
+**lexq is designed to be used primarily by LLMs in a terminal.** Start up your favorite LLM and ask it to use the lexq tool. It's that easy!
+
+To load this repo's data:
+
+```bash
+lexq download pypa/packaging
+```
+
+This will automatically download essential data files from the last parsed commit. Consult `lexq --moreinfo` for other options, including downloading multiple commits, blobs, etc.
+
+## Data structure
+
+All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) (`.nq.gz`), a standard RDF format that can be loaded into any triplestore or graph database.
+
+```
+.
+├── aggregate
+│   ├── ast
+│   │   └── 3b77a26f5a27473ad3b08194d773f325d018a2d0
+│   │       └── chunk-001.nq.gz
+│   ├── lsp
+│   │   └── 3b77a26f5a27473ad3b08194d773f325d018a2d0.nq.gz
+│   └── repolex
+│       └── 3b77a26f5a27473ad3b08194d773f325d018a2d0
+│           └── chunk-001.nq.gz
+├── blob
+│   ├── 03192c1777420cc1ffda8ff5f57dcc9d1b4587e1.nq.gz
+│   ├── 05e554a64c244d96c21dd2d8ce06f0060b65cac9.nq.gz
+│   ├── 0888fb6967ef3c3055ccbc6d7f7609984d842cec.nq.gz
+│   ├── 08a2a46d8c0fe5f579ebd18ebcd0fc002f40c685.nq.gz
+│   ├── 0cad38ae541f129496681f96c88e02312eae98e6.nq.gz
+│   ├── 0e79e8a882be74fe76c80ccf49a9cd68fb636fd4.nq.gz
+│   ├── 1206c462d4fcaa670a816e201bb88b27dfc9cf88.nq.gz
+│   ├── 184a794c35d6d206289ab422b78528886a5a7818.nq.gz
+│   ├── 1dfd23fa3c0eb944358b1eee0b7c241c79da3cd3.nq.gz
+│   ├── 1e3d9575f8b977b5f212dc85e864ca9bfad7e2c6.nq.gz
+│   ├── 210ff0e486e3863421cead6dcd8713bbb247019a.nq.gz
+│   ├── 21695a74b5107c96ba4bb2cbca6b7f259dacd330.nq.gz
+│   ├── 225e2eee01238571c50595eb104e0b70d5f503c4.nq.gz
+│   ├── 253f6b1b7ebd711fdc6bbbab3b56897061bab515.nq.gz
+│   ├── 2659b8ee25768ba38932177ae91d4f44a482917a.nq.gz
+│   ├── 274c0971985e9c507840d2e8e799fb5a6777984b.nq.gz
+│   ├── 299a951cf11fd09eede8df0e3e95a77dfeea4a64.nq.gz
+│   ├── 2adf336e5a09e67d7146d3b0c48d88f63d1d8da8.nq.gz
+│   ├── 2bbe495f4694e665ea39d9d14dfec048df1e0729.nq.gz
+│   ├── 2f269edc18a502c160409ac69cb41b8623f82360.nq.gz
+│   ├── 3079be69bf880f47e64dbf62993f0e54754b7315.nq.gz
+│   ├── 31834a394d5577d6ecbf7dfb1783799148e7c6fa.nq.gz
+│   ├── 335b275fa7575b0a7c525a713fbe0252ad2d956f.nq.gz
+│   ├── 39279f9663ff1235b561905bed1c4332c084db96.nq.gz
+│   ├── 3f2e0d35949a20b2105d25fd197e2851b483c91a.nq.gz
+│   ├── 42ce7b75c92fb01a3f6ed17eea363f756b7da582.nq.gz
+│   ├── 4480901820077e4d7997d7558aa4118dee0aa41e.nq.gz
+│   ├── 450f6f9f8a0d43a33f48589194f6d7f7d0edf8e9.nq.gz
+│   ├── 46066ad2ded1af7c68a4f5d4d3ccc66933b89f43.nq.gz
+│   ├── 497b0645217512ae2ba8ff61341fd2bbfa3648cd.nq.gz
+│   ├── 4e5c0396b94d8f3c6b5ef6fcd1cc67317edd3e85.nq.gz
+│   ├── 4e8116a79ca80d60657542a23b4bbcbc3c518eaf.nq.gz
+│   ├── 5071561560ca52c6a1b000ca59a44558b2f2d907.nq.gz
+│   ├── 52964aec70def27c8a75f7164dec43111aafc012.nq.gz
+│   ├── 565b0521d0c2cdbfe493d19765b04d5c119fa7eb.nq.gz
+│   ├── 5677c0e89bd9c84b10b0239a0c26a799d3e646b8.nq.gz
+│   ├── 56e38f9220ee796061315821764dd4a7fe932f3c.nq.gz
+│   ├── 59996e28c27516a7342a0f0b8052e0205455b65a.nq.gz
+│   ├── 59db7412d509294f913ce0bd5886d14d853f0369.nq.gz
+│   ├── 5a9ca9e65aaf0cfbca5ca694301f4be92e6bd789.nq.gz
+│   ├── 5d26b0d1ae2d21b77e24b692d5a7e1fd01296edc.nq.gz
+│   ├── 5e591c3ec5dde987c61ed21c0d7fa52582dc1b34.nq.gz
+│   ├── 5e9899fc07609f37f5251f0da5a5af97d4d79234.nq.gz
+│   ├── 5ef27c897a4df35a2a6923b608a5e04a0a38b9ee.nq.gz
+│   ├── 60c4bec6ca251d481825ef1f99fbafdc8edac914.nq.gz
+│   ├── 635b806c12f759f5c4fdac108e386325e605254c.nq.gz
+│   ├── 661f6730d23e93515d368482935cad58f7e2120f.nq.gz
+│   ├── 678f1adb973c2dda7f8e01a5006caacdf3fc4699.nq.gz
+│   ├── 6f62d44e4ef733c0e713afcd2371fed7f2b3de67.nq.gz
+│   ├── 735fb8cdec219d287b18ab54af3999a48635c656.nq.gz
+│   ├── 767f0885fd2f4915bcbb9568f1060be401c59467.nq.gz
+│   ├── 795364586420d27213fe45d7500f5986657dc27f.nq.gz
+│   ├── 7f1bee9cb3284cf6c093ac7b6b68f5055662b82d.nq.gz
+│   ├── 8053e06ac02e74d721f9706f55a5393dedba29d5.nq.gz
+│   ├── 80d3f14ee9119da8960869fdfaed0ee2f2b7f8eb.nq.gz
+│   ├── 83e8aa6693fdff33e41c77d0ad4c8320cc7fba74.nq.gz
+│   ├── 883da23c96d1ef8cf28a0dc02a4e6c1c7d6d013a.nq.gz
+│   ├── 8c7b09949f2b07beeeda1e201ef5e26bfa525ef9.nq.gz
+│   ├── 8ec8c559b5c188c4fa09c4d7915c382df14c411e.nq.gz
+│   ├── 9107ecfa4cd3fe78d704bce1a6e056c24aa7e210.nq.gz
+│   ├── 934d9f6f8496111775a490baf5c38d7965caf3fb.nq.gz
+│   ├── 965ab3003af97dc37d31878feeff574b59dae17b.nq.gz
+│   ├── 96da8465d76463b27e86f41c40bdc29226eb1617.nq.gz
+│   ├── 9768fd06d0da25abe514ff21702454b3e48ac822.nq.gz
+│   ├── 9d683b40247cd7bd8d91519ae41c1bacdea61a28.nq.gz
+│   ├── a277af28220b6dbe4599471104d1c7a2bd1e1288.nq.gz
+│   ├── a564f15246ad65038029f8fefb48621fa64a3abd.nq.gz
+│   ├── a779538ebd712eaa23677f39b290634da979c53d.nq.gz
+│   ├── acd2b94c7f46c2ba174c16865636d9433c4a70a0.nq.gz
+│   ├── b30054603fa5e61fde81180b399ca7362ea561f1.nq.gz
+│   ├── b509336233c2fafe4185a49da5909c8bbb38dfd7.nq.gz
+│   ├── b811bb4f208d4055cc40fa9972ba9aa17141c3b5.nq.gz
+│   ├── ba3fa462bf16f25165b5165966b4fdf3dfa05279.nq.gz
+│   ├── c41c8137f2679a0fac21bb845596e231ae88dbd8.nq.gz
+│   ├── c476c7512de7aa728304520265e4ce4120b75e7b.nq.gz
+│   ├── c4e9578889efc3eee73f12a0d8df70fe89ddd67e.nq.gz
+│   ├── c7f5b0b5e5bb69550d594b8d181f6f881356e404.nq.gz
+│   ├── ca3706fe492f4cf0762f7734d84c2d269f88bbc5.nq.gz
+│   ├── cc9dca61c8f1a6ed937f51927ca9b3656e81a901.nq.gz
+│   ├── d70261b717941b6388c6f75d0d64d7a54e24eae9.nq.gz
+│   ├── d85c962159936237e3614d3c06d7fc0db70af685.nq.gz
+│   ├── daf85d34737e237b7d1473929363340fb7402e3c.nq.gz
+│   ├── db7e46eaa652b253ca9ccd3dc5ce666c06df5707.nq.gz
+│   ├── ddf41da1315f3f56589ebf2d4d52394c087b6cf5.nq.gz
+│   ├── e044e75fabef7d958f7d588772a732b058865ed0.nq.gz
+│   ├── e5d44b8c92fc72fe954ee99c7009688d40ca3a6e.nq.gz
+│   ├── e69de29bb2d1d6434b8b29ae775ad8c2e48c5391.nq.gz
+│   ├── e6d20dd3f56f880a92db7409a3e1335cb282a8f2.nq.gz
+│   ├── efbcfc0eea2555d623ae15d1c6b4fbc8a6e2cb27.nq.gz
+│   ├── f433b1a53f5b830a205fd2df78e2b34974656c7b.nq.gz
+│   ├── f6bcd380bb18d6c8f25d52af97d79020eba4e569.nq.gz
+│   ├── f6c1f5cd226b926f96a3bb1e9fb0f18d1bd021c9.nq.gz
+│   ├── f7fdb00029ee217beac1f61d6ad36f2dd7f0ad36.nq.gz
+│   ├── fd05f06b68524be0c429f39d88e9d1472999dc72.nq.gz
+│   └── ff1d540a30c6df244d013bf411ad8ea63eb3f16f.nq.gz
+├── branch
+│   └── branch.nq.gz
+├── commit
+│   └── commit.nq.gz
+├── dep
+│   └── 3b77a26f5a27473ad3b08194d773f325d018a2d0.nq.gz
+├── filetree
+│   └── 3b77a26f5a27473ad3b08194d773f325d018a2d0.nq.gz
+├── issue
+│   └── issue.nq.gz
+├── pr
+│   └── pr.nq.gz
+└── tag
+    └── tag.nq.gz
+
+15 directories, 105 files
+```
+
+| Directory | What it contains |
+|-----------|-----------------|
+| `blob/` | Per-file AST graphs, content-addressed by git blob SHA. Each file in the source repo gets its own graph. |
+| `aggregate/ast/` | Combined AST graph per parsed commit. Merges all blob graphs for a snapshot of the entire codebase at that point. |
+| `aggregate/lsp/` | Language Server Protocol enrichment: resolved symbols, definitions, references, and type information. |
+| `aggregate/dataflow/` | Interprocedural data flow edges between functions and modules. |
+| `aggregate/repolex/` | Combined graph (AST + LSP + dataflow) per commit. |
+| `commit/` | Git commit metadata (author, date, message, parent links). |
+| `branch/` | Branch metadata. |
+| `tag/` | Tag metadata. |
+| `filetree/` | File tree snapshots per commit (which files existed and their blob SHAs). |
+
+## Source repository
+
+[pypa/packaging](https://github.com/pypa/packaging)
+
+---
+*Parsed on 2026-04-09 by [repolex](https://repolex.ai)*

@@ -1,0 +1,18 @@
+[2026-09-19T04:20:33Z] === ENRICH ITERATION 1 START | repo=pypa/packaging sha=e3f21826 ===
+[2026-09-19T04:20:33Z] [iter=1] PHASE START: enrich repo=pypa/packaging sha=e3f21826 runlog=/home/runner/work/forx/forx/storage/aggregate/lsp/logs/e3f21826-enrich-iter-001.log output=/home/runner/work/forx/forx/storage/aggregate/lsp/e3f218269c0f2fd2aff228b310d7f474a3ffd487.nq.gz
+[2026-09-19T04:20:33Z] [iter=1] Step 1: Loading AST into disk-backed store mem_mb=78 MB
+[2026-09-19T04:20:37Z] [iter=1] AST store loaded triples=366163 load_secs=4 mem_mb=574 MB
+[2026-09-19T04:20:37Z] [iter=1] Step 2: Finding LSP targets mem_mb=574 MB
+[2026-09-19T04:20:37Z] [iter=1] LSP targets found call_sites=2148 imports=2 extends=0 implements=0 secs=1
+[2026-09-19T04:20:38Z] [iter=1] Step 2.7: Building position index (one-shot, shared across resolvers) mem_mb=574 MB
+[2026-09-19T04:20:40Z] [iter=1] Position index built positions=26105 nodes_with_types=33915 secs=2 mem_mb=574 MB
+[2026-09-19T04:20:40Z] [iter=1] Step 3: Starting LSP resolution mem_mb=574 MB already_completed_types=[] already_completed_files=0
+[2026-09-19T04:20:40Z] [iter=1] Resolving target type target_type=call_site count=2148
+[2026-09-19T04:21:04Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=0.5 files_done=8 resolved=908 errors=126 current=tests/test_manylinux.py
+[2026-09-19T04:21:35Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=1.0 files_done=22 resolved=1379 errors=332 current=tests/test_structures.py
+[2026-09-19T04:21:40Z] [iter=1] Target type resolved target_type=call_site resolved=1421 errors=334 secs=60 mem_mb=574 MB
+[2026-09-19T04:21:40Z] [iter=1] Resolving target type target_type=import_statement count=2
+[2026-09-19T04:21:41Z] [iter=1] Target type resolved target_type=import_statement resolved=1 errors=0 secs=1 mem_mb=574 MB
+[2026-09-19T04:21:44Z] [iter=1] Step 5: Writing final enrichment file triples=19558
+[2026-09-19T04:21:44Z] [iter=1] Enrichment file written path=/home/runner/work/forx/forx/storage/aggregate/lsp/e3f218269c0f2fd2aff228b310d7f474a3ffd487.nq.gz size_kb=339
+[2026-09-19T04:21:44Z] [iter=1] PHASE END: enrich elapsed_s=72 elapsed_min=1.2 total_triples=19558

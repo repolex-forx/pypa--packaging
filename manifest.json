@@ -1606,7 +1606,12 @@
         "blob/b5a35be92af25523637c1402e42a59d97b02a35a.nq.gz",
         "blob/cb751d67c9a36aafc7d3023411ee6787e5093716.nq.gz",
         "blob/fb274930799da0f8ee17566b5b587b4047282c7b.nq.gz"
-      ]
+      ],
+      "ast": [
+        "aggregate/ast/b3a5d7d68991c040615d5345bb55f61de53ba176/chunk-001.nq.gz"
+      ],
+      "lsp": "aggregate/lsp/b3a5d7d68991c040615d5345bb55f61de53ba176.nq.gz",
+      "repolex": "aggregate/repolex/b3a5d7d68991c040615d5345bb55f61de53ba176/chunk-001.nq.gz"
     }
   ],
   "commit": "commit/commit.nq.gz",

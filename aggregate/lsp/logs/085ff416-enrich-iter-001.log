@@ -1,0 +1,19 @@
+[2026-09-19T06:31:08Z] === ENRICH ITERATION 1 START | repo=pypa/packaging sha=085ff416 ===
+[2026-09-19T06:31:08Z] [iter=1] PHASE START: enrich repo=pypa/packaging sha=085ff416 runlog=/home/runner/work/forx/forx/storage/aggregate/lsp/logs/085ff416-enrich-iter-001.log output=/home/runner/work/forx/forx/storage/aggregate/lsp/085ff41692b687ae5b0772a55615b69a5b677be9.nq.gz
+[2026-09-19T06:31:08Z] [iter=1] Step 1: Loading AST into disk-backed store mem_mb=78 MB
+[2026-09-19T06:31:12Z] [iter=1] AST store loaded triples=357883 load_secs=4 mem_mb=563 MB
+[2026-09-19T06:31:12Z] [iter=1] Step 2: Finding LSP targets mem_mb=563 MB
+[2026-09-19T06:31:13Z] [iter=1] LSP targets found call_sites=2153 imports=2 extends=0 implements=0 secs=1
+[2026-09-19T06:31:14Z] [iter=1] Step 2.7: Building position index (one-shot, shared across resolvers) mem_mb=563 MB
+[2026-09-19T06:31:16Z] [iter=1] Position index built positions=25524 nodes_with_types=33160 secs=2 mem_mb=563 MB
+[2026-09-19T06:31:16Z] [iter=1] Step 3: Starting LSP resolution mem_mb=563 MB already_completed_types=[] already_completed_files=0
+[2026-09-19T06:31:16Z] [iter=1] Resolving target type target_type=call_site count=2153
+[2026-09-19T06:31:53Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=0.7 files_done=4 resolved=159 errors=229 current=tests/test_utils.py
+[2026-09-19T06:32:44Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=1.6 files_done=6 resolved=278 errors=563 current=noxfile.py
+[2026-09-19T06:33:19Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=2.2 files_done=11 resolved=583 errors=770 current=packaging/_manylinux.py
+[2026-09-19T06:33:45Z] [iter=1] Target type resolved target_type=call_site resolved=902 errors=900 secs=149 mem_mb=563 MB
+[2026-09-19T06:33:45Z] [iter=1] Resolving target type target_type=import_statement count=2
+[2026-09-19T06:33:46Z] [iter=1] Target type resolved target_type=import_statement resolved=1 errors=0 secs=1 mem_mb=563 MB
+[2026-09-19T06:33:48Z] [iter=1] Step 5: Writing final enrichment file triples=18101
+[2026-09-19T06:33:49Z] [iter=1] Enrichment file written path=/home/runner/work/forx/forx/storage/aggregate/lsp/085ff41692b687ae5b0772a55615b69a5b677be9.nq.gz size_kb=327
+[2026-09-19T06:33:49Z] [iter=1] PHASE END: enrich elapsed_s=160 elapsed_min=2.7 total_triples=18101

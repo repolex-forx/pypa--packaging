@@ -1,0 +1,7 @@
+[2026-09-19T03:55:50Z] === AST ITERATION 1 START | repo=pypa/packaging sha=d5639172 ===
+[2026-09-19T03:55:50Z] [iter=1] PHASE START: ast repo=pypa/packaging sha=d5639172
+[2026-09-19T03:55:50Z] [iter=1] Building AST aggregate chunks
+[2026-09-19T03:56:13Z] [iter=1] AST chunks built count=1 triples=396372
+[2026-09-19T03:56:13Z] [iter=1] AST .complete marker written path=/home/runner/work/forx/forx/storage/aggregate/ast/d563917280d65a6ce2e622bd3d07438e1ee259f3/.complete
+[2026-09-19T03:56:13Z] [iter=1] PHASE END: ast elapsed_s=23 elapsed_min=0.4
+[2026-09-19T03:56:13Z] [iter=1] Wrote .next-action.json next_action=enrich path=/home/runner/work/forx/forx/storage/aggregate/.next-action.json
